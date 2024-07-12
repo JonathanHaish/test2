@@ -14,6 +14,5 @@ form.addEventListener('submit', function(e) {
 socket.on('chat message', function(msg) {
     var item = document.createElement('li');
     item.textContent = msg;
-    document.getElementById('messages').appendChild(item);
-    window.scrollTo(0, document.body.scrollHeight);
+    $("#messages").append(item);
 });
